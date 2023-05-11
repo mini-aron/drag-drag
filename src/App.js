@@ -4,7 +4,7 @@ import Game from './pages/Game';
 function App() {
   return (
     <Routes>
-      <Route  element={<Game/>} ></Route>
+      <Route path='/' element={<Game/>} ></Route>
     </Routes>
   );
 }
