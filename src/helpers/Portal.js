@@ -1,7 +1,7 @@
 
-import reactDom from "react-dom";
+import ReactDOM from "react-dom";
 
 export default function Portal({children}) {
     const el = document.getElementById("modal");
-    return reactDom.createPortal(children,el);
+    return ReactDOM.createPortal(children,el);
 }

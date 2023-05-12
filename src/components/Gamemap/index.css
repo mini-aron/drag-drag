@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "TTWanjudaedunsancheB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dovemayo_gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+}
+
+.main_div {
+  position: relative;
+  width: 100%;
+}
+
+.div {
+  margin: 0;
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.div_box {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 8px;
+  margin: 12px;
+  cursor: move;
+  font-size: 30px;
+  font-family: "Dovemayo_gothic";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(149, 153, 158);
+}
+
+.main_div p {
+    position: relative;
+    left: 50%;
+    transform: translate(-0.5%);
+  font-family: "Dovemayo_gothic";
+  font-size: 32px;
+}
+.vibration {
+    background-color: red;
+    animation: vibration .1s infinite;
+  }
+
+@keyframes vibration {
+    from {
+      transform: rotate(1deg);
+    }
+    to {
+      transform: rotate(-1deg);
+    }
+  }
+
+.sizeup{
+    background-color: rgb(81, 221, 86);
+    animation: sizeup .2s infinite;
+}
+@keyframes sizeup {
+    from {
+      transform: translateY(0);
+      
+    }
+    to {
+      transform: translateY(5%);
+    }
+  }
