@@ -4,15 +4,13 @@ import "./index.css";
 
 export default function Gamemap() {
   const [Timer, setTimer] = useState();
+  const [minus,setMinus] = useState(false);
   const [counter, setCounter] = useState(0);
   const [score, setScore] = useState({
     point: 0,
     conceded: 0,
   });
 
-  const onDragStart = (e) => {
-    e.dataTransfer.setData("id", e.target.id);
-  };
 
   const onDragOver = (e) => {
     e.preventDefault();
@@ -32,9 +30,13 @@ export default function Gamemap() {
       }, 400);
     }else{
       e.target.classList.add("vibration");
+      setMinus(true)
       setTimeout(function() {
         e.target.classList.remove("vibration");
+        setScore({ ...score, point: score.point - 1 });
+        setMinus(false)
       }, 400);
+      
     }
     setCounter(counter + 1);
   };
@@ -53,16 +55,20 @@ export default function Gamemap() {
       }, 400);
     }else{
       e.target.classList.add("vibration");
+      setMinus(true)
       setTimeout(function() {
         e.target.classList.remove("vibration");
+        setScore({ ...score, point: score.point - 1 });
+        setMinus(false)
       }, 400);
+      
     }
     setCounter(counter + 1);
   };
 
   return (
     <div className="main_div">
-      <p>{score.point}</p>
+      <p>score:{score.point}{minus?<div className="minus">-1</div>:null}</p>
       <Character />
       <div className="div">
         <div

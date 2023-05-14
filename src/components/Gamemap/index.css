@@ -49,8 +49,9 @@
 
 .main_div p {
     position: relative;
+    width: 100px;
     left: 50%;
-    transform: translate(-0.5%);
+    transform: translate(-50%);
   font-family: "Dovemayo_gothic";
   font-size: 32px;
 }
@@ -80,4 +81,13 @@
     to {
       transform: translateY(5%);
     }
+  }
+
+  .minus{
+    position: absolute;
+    color: red;
+    left: 120%;
+    font-family: "Dovemayo_gothic";
+    transform: translateY(-100%);
+  font-size: 32px;
   }
